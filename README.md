@@ -54,7 +54,7 @@ How to start a lxc container with rootfs file in CE switch?
 * Enter the container with command .
   
   `Bash`
-  Ps:default user name and password is root/root.
+   Ps:default user name and password is root/root.
 　　　
 * Exit from the container .
 
