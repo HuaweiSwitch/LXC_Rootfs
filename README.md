@@ -25,8 +25,8 @@ How to build a rootfs file in a server?
 
   `sudo docker run -v ~:/data -v /dev:/dev -v /lib/modules/:/lib/modules/ 	--add-host='makyo:127.0.0.1' --privileged -i -t  1587/osc-builder:latest /bin/bash`
 
-* Install qemu and qemu-user-static package .      
-　　　
+* Install qemu and qemu-user-static package . 
+
   `apt-get install qemu qemu-user-static`
 　　　
 * Execute the shell script to make file system folder.
