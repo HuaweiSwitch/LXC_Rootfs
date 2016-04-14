@@ -30,7 +30,7 @@ How to build a rootfs file in a server?
   `apt-get install qemu qemu-user-static`
 　　　
 * Execute the shell script to make file system folder.
-　　　
+
   `Sh create_rootfs.sh`
 　　　
 * Install squashfs-tools package in server .
@@ -44,20 +44,20 @@ How to build a rootfs file in a server?
 How to start a lxc container with rootfs file in CE switch?
 ----
 * Transfer the rootfs file to CE switch .
-　　　
+
   `Using ftp tools to transfer rootfs.sqfs from local computers.`
 　　　
 * Load the lxc firmware with command.
-　　　
+
   `Bash shell rootfs.sqfs`
 　　　
-* Enter the container with command .  
-　　　
+* Enter the container with command .
+  
   `Bash`
   Ps:default user name and password is root/root.
 　　　
 * Exit from the container .
-　　　
+
   Ctrl a+q
 　　　
 * Unable the container with command.
@@ -68,7 +68,7 @@ References
 ----
   [1] For docker instruction:
      < https://opensource.com/recources/what-docker>
-　　
+     
   [2] For docker details:
      < https://www.docker.com>
 　　
