@@ -117,9 +117,9 @@ LOCAL_CHROOT="${CHROOT} ${TARGET}"
     && sudo rm ${TARGET}/clean.sh \
     && sudo rm ${TARGET}/changepasswd.sh \
     && ${LOCAL_CHROOT} sh -c 'echo "pts/x" >> /etc/securetty' \
-    && ${LOCAL_CHROOT} sh -c 'echo "huawei" > /etc/hostname' \
-    && ${LOCAL_CHROOT} sh -c 'echo "127.0.0.1 huawei" >> /etc/hosts' \
-    && ${LOCAL_CHROOT} sh -c 'hostname huawei' \
+    && ${LOCAL_CHROOT} sh -c 'echo "CE" > /etc/hostname' \
+    && ${LOCAL_CHROOT} sh -c 'echo "127.0.0.1 CE" >> /etc/hosts' \
+    && ${LOCAL_CHROOT} sh -c 'hostname CE' \
     && ${LOCAL_CHROOT} sh -c 'sed -ie "s/^trap - EXIT # Disable emergency handler$/\/etc\/init.d\/ssh restart \ntrap - EXIT # Disable emergency handler/" /etc/init.d/rc' \
     && ${LOCAL_CHROOT} sh -c 'sed -ie "s/^PermitRootLogin without-password$/PermitRootLogin yes/" /etc/ssh/sshd_config' \
     && sudo rm ${TARGET}/usr/bin/${QEMU_STATIC_BIN} \
