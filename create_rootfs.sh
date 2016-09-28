@@ -96,6 +96,7 @@ LOCAL_CHROOT="${CHROOT} ${TARGET}"
     && ${LOCAL_CHROOT} apt-get install --force-yes -y --no-install-recommends openssh-server \
        ftp telnet ssh libxslt1.1 libxml2 libidn11 librtmp1 libssh2-1 libldap-2.4-2 libcurl4-openssl-dev vim \
        tree openssl ntp  binutils gcc sudo psmisc gdb \
+    && ${LOCAL_CHROOT} apt-get upgrade \
     && ${LOCAL_CHROOT} apt-get download busybox \
     && ${LOCAL_CHROOT} sh -c 'dpkg -X busybox*.deb /busybox' \
     && ${LOCAL_CHROOT} sh -c 'rm -f busybox*.deb' \
