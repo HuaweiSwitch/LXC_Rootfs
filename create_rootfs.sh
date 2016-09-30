@@ -23,9 +23,9 @@ elif [ "$1" == "arm64" ]; then
     LIB_ARCH=aarch64-linux-gnu
     OPTION="--foreign --arch arm64"
 else
-    echo "usage:"
-    echo "       ./create_rootfs.sh {powerpc|armel|arm64|x86_64}"
-    echo " "
+    echo 'usage:'
+    echo '       ./create_rootfs.sh {powerpc|armel|arm64|x86_64}'
+    echo ' '
     exit 1
 fi
 SUITE=jessie
@@ -35,7 +35,7 @@ if [ -e /usr/bin/${QEMU_STATIC_BIN} ];then
     echo "find /usr/bin/${QEMU_STATIC_BIN} success"
 else
     echo "cant find /usr/bin/${QEMU_STATIC_BIN},please:"
-    echo "sudo apt-get install qemu-user-static qemu"
+    echo 'sudo apt-get install qemu-user-static qemu'
     exit 1
 fi
 if [ -e ${TARGET} ];then
@@ -51,7 +51,7 @@ echo "TARGET:          ${TARGET}"
 echo "MIRROR:          ${MIRROR}"
  
 #清理工作
-echo "#!/bin/bash" > clean.sh
+echo '#!/bin/bash' > clean.sh
 echo "apt-get clean" >>clean.sh
 echo "apt-get autoclean" >>clean.sh
 echo "rm -rf /var/cache/apt/" >>clean.sh
