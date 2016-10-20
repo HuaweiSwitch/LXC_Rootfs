@@ -20,7 +20,8 @@ A server which operation system is Ubuntu 14.04 or Debian 8.
 	`docker pull 1587/osc-builder`
 * Launch a container which build by the image.    
 	`sudo docker run -v ~/LXC_Rootfs:/data -v /dev:/dev -v /lib/modules/:/lib/modules/ --add-host='osc:127.0.0.1' --privileged -i -t  1587/osc-builder:latest /bin/bash`
-* Execute the shell script with the parameter to make file system folder.    
+* Enter into the /data/ directory and execute the shell script with the parameter to make file system folder.    
+	`cd /data`    
 	`./create_rootfs.sh {powerpc|armel}`　
 * Install qemu and qemu-user-static package.     
 	`apt-get install qemu qemu-user-static`
