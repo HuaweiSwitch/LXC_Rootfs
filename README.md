@@ -8,8 +8,8 @@ A server which operation system is Ubuntu 14.04 or Debian 8.
 
 * Get a LXC_Rootfs directory with a shell script by git command.    
 	`git clone https://github.com/HuaweiSwitch/LXC_Rootfs.git`
-* Add the executive permission for the LXC_Rootfs directory.    
-	`chmod +x -R LXC_Rootfs/`
+* Add permission for the LXC_Rootfs directory.    
+	`chmod 777 -R LXC_Rootfs/`
 * Configure repo and source of apt-get before building process.     
 	`apt-get update`
 * Install docker by install the docker-io package in server.    
@@ -22,7 +22,7 @@ A server which operation system is Ubuntu 14.04 or Debian 8.
 	`sudo docker run -v ~/LXC_Rootfs:/data -v /dev:/dev -v /lib/modules/:/lib/modules/ --add-host='osc:127.0.0.1' --privileged -i -t  1587/osc-builder:latest /bin/bash`
 * Enter into the /data/ directory and execute the shell script with the parameter to make file system folder.    
 	`cd /data`    
-	`./create_rootfs.sh {powerpc|armel}`　
+	`./create_rootfs.sh {powerpc|armel}`　(PS: The passwd for osc-builder is osc-buidler.)
 * Install qemu and qemu-user-static package.     
 	`apt-get install qemu qemu-user-static`
 * Install squashfs-tools package in server.    
