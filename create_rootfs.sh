@@ -78,7 +78,7 @@ echo "::shutdown:/sbin/swapoff -a">>inittab
  
 CHROOT="sudo DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true LC_ALL=C LANGUAGE=C LANG=C chroot "
 
-if [ "$1" == "armel"];then
+if [ "$1" == "armel" ];then
 OCAL_CHROOT="${CHROOT} ${TARGET}"
     sudo debootstrap ${OPTION} ${SUITE} ${TARGET} ${MIRROR} \
     && sudo cp /usr/bin/${QEMU_STATIC_BIN} ${TARGET}/usr/bin/ \
