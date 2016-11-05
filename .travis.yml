@@ -37,7 +37,7 @@ env:
   - KERNEL=3.2.76
   - KERNEL=2.6.32.70
 
-script: chmod 777 ovsdb_lxc_make.sh ; ./ovsdb_lxc_make.sh
+script: chmod 777 create_rootfs.sh ; ./create_rootfs.sh
 #make Makefile.am
 
 notifications:
