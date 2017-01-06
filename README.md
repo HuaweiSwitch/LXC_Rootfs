@@ -43,6 +43,14 @@ A server which operation system is Ubuntu 14.04 or Debian 8.
 * Unable the container with command.    
 	`undo bash shell rootfs.sqfs`
 
+### Q&A
+
+* When you set or change your password for user in linux container with the armel rootfs, you may meet error information as below:
+	`passwd: System error`
+	`passwd: password unchanged`
+
+To solve this problem, you should compile the passwd ball in armel cross compile tool again with "--without-libpam" and "--without-audit", which will be installed in linux container. 
+
 ### References
 
 [1] For docker instruction:  [https://opensource.com/recources/what-docker](https://opensource.com/recources/what-docker)
