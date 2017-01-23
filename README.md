@@ -28,7 +28,8 @@ A server which operation system is Ubuntu 14.04 or Debian 8.
 * Install squashfs-tools package in server.    
 	`apt-get install squashfs-tools`   
 * Create root file system into a rootfs file with sqfs format.    
-	`mksquashfs rootfs/ rootfs.sqfs`
+	`mksquashfs rootfs/ rootfs.sqfs` 
+	(PS: If the "armel" has been selected as a parameter, the command should be executed:`chmod 100000:100000 -R rootfs/`.)
 
 ### How to start a lxc container with rootfs file in CE switch?
 
