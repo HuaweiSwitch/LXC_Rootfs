@@ -12,19 +12,9 @@ elif [ "$1" == "armel" ]; then
     LIB_ARCH=armel-linux-gnu
     OPTION="--foreign --arch ${ARCH}"
     #OPTION="--no-resolve-deps --variant minbase --foreign --arch ${ARCH}"
-elif [ "$1" == "x86_64" ]; then
-    ARCH=x86_64
-    QEMU_STATIC_BIN=qemu-x86_64-static
-    LIB_ARCH=x86_64-linux-gnu
-    OPTION="--foreign --arch amd64"
-elif [ "$1" == "arm64" ]; then
-    ARCH=aarch64
-    QEMU_STATIC_BIN=qemu-aarch64-static
-    LIB_ARCH=aarch64-linux-gnu
-    OPTION="--foreign --arch arm64"
 else
     echo 'usage:'
-    echo ' ./create_rootfs.sh {powerpc|armel|arm64|x86_64}'
+    echo ' ./create_rootfs.sh {powerpc|armel}'
     echo ' '
     exit 1
 fi
