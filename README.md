@@ -23,7 +23,8 @@ A server which operation system is Ubuntu 14.04 or Debian 8.
 * Enter into the /data/ directory and execute the shell script with the parameter to make file system folder.    
 	`cd /data`    
 	`./create_rootfs.sh {powerpc|armel}`　(PS: The passwd for osc-builder is osc-buidler.)
-* Install qemu and qemu-user-static package.     
+	Attention:If the architecture of device is arm, please choose the “armel” as parameter, or choose the “powerpc”.
+* Install qemu and qemu-user-static package.     
 	`apt-get install qemu qemu-user-static`
 * Install squashfs-tools package in server.    
 	`apt-get install squashfs-tools`   
