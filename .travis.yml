@@ -38,9 +38,3 @@ env:
   - KERNEL=2.6.32.70
 
 script: chmod 777 create_rootfs.sh ; sudo apt-get install qemu-user-static qemu ; ./create_rootfs.sh powerpc
-#make Makefile.am
-
-notifications:
-  email:
-    recipients:
-      - build@openvswitch.org
