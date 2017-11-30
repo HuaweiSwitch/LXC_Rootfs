@@ -13,7 +13,7 @@ A server which operation system is Ubuntu 14.04 or Debian 8.
 * Configure repo and source of apt-get before building process.     
 	`apt-get update`
 * Install docker by install the docker-io package in server.    
-	`apt-get install -y docker.io`  
+	`apt-get install -y docker.io qemu qemu-user-static`  
 * Add the docker package links.   
 	`ln -sf /usr/bin/docker.io /usr/local/bin/docker` 
 * Pull the specific image from a docker registry server, for example:1587/osc-builder.   
@@ -29,7 +29,7 @@ A server which operation system is Ubuntu 14.04 or Debian 8.
 * Install squashfs-tools package in server.    
 	`apt-get install squashfs-tools`   
 * Create root file system into a rootfs file with sqfs format.    
-	`mksquashfs rootfs/ rootfs.sqfs` (PS: If the "armel" has been selected as a parameter, the command should be executed:`chmod 100000:100000 -R rootfs/` before executing the mksquashfs command.)
+	`mksquashfs {powerpc|armel}-rootfs/ rootfs.sqfs` (PS: If the "armel" has been selected as a parameter, the command should be executed:`chmod 100000:100000 -R rootfs/` before executing the mksquashfs command.)
 
 ### How to start a lxc container with rootfs file in CE switch?
 
